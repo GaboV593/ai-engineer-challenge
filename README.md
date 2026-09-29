@@ -7,6 +7,7 @@ herramientas vía MCP (simulado) y defensas contra prompt injection indirecta.
 - Arquitectura y diagramas: [docs/architecture.md](docs/architecture.md)
 - Criterios del reto: [docs/challenge-requirements.md](docs/challenge-requirements.md)
 - Plan y decisiones: [docs/implementation-plan.md](docs/implementation-plan.md)
+- Flujo de prueba vía API (paso a paso y matriz de trazabilidad): [docs/api-test-flow.md](docs/api-test-flow.md). Automatizado en `scripts/verify_api.sh`
 
 ## Estructura
 

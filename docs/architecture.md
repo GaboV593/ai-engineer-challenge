@@ -4,6 +4,10 @@ Arquitectura hexagonal (puertos y adaptadores). El dominio no depende de nada; l
 depende solo del dominio y de sus puertos (`typing.Protocol`); los adaptadores implementan
 esos puertos y `bootstrap.py` los conecta (composition root).
 
+## Borrador original
+
+![Borrador de arquitectura hexagonal](arquitectura-borrador.png)
+
 ## Vista de componentes
 
 ```mermaid

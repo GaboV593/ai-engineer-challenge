@@ -48,7 +48,8 @@ class FakeLLM:
             else:
                 content = "No tengo herramientas disponibles para responder."
         elif "export" in lowered and "export_documents" not in called:
-            doc_ids = [m.group(1) for m in _DOC_RE.finditer(tool_outputs)]
+            # Prioriza los ids que nombra el usuario; si no nombra ninguno, usa los recuperados.
+            doc_ids = re.findall(r"\bDOC-[A-Z]+-\d+\b", query) or [m.group(1) for m in _DOC_RE.finditer(tool_outputs)]
             tool_call = ToolCall(id="call_2", name="export_documents", arguments={"doc_ids": doc_ids})
         else:
             content = _summarize(tool_outputs)
